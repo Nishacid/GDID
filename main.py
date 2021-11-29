@@ -58,7 +58,7 @@ if __name__ == "__main__":
                 if pattern.search(req):
                     pass
                 else:
-                    print(f"[+] Possible result found for {url} : https://google.com/search?q=site:http://{url}%20{company}")  
+                    print(f"[+] Possible result found for {url} : https://google.com/search?q=site:http://{url}%20%22{company}%22")  
             except requests.ConnectionError:
                 print("[-] Error, couldn't connect")
 
