@@ -52,7 +52,7 @@ if __name__ == "__main__":
                     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 ",
                     'DNT' : '1'}
                 
-                req = requests.get(f"https://www.google.com/search?q=site:http://{url}%20{company}&hl=en", headers=headers).text
+                req = requests.get(f"https://www.google.com/search?q=site:http://{url}%20%22{company}%22&hl=en", headers=headers).text
                 pattern = re.compile("/span> \- (.*?)\.</p><p")
                 
                 if pattern.search(req):
